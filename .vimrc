@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
  	Plug 'vim-airline/vim-airline'
 	Plug 'tpope/vim-commentary'
 	Plug 'chiel92/vim-autoformat'
+	Plug 'tpope/vim-surround'
+	Plug 'kien/ctrlp.vim'
 call plug#end()
 
 """ Transparent Background:
@@ -40,8 +42,29 @@ filetype plugin on					"Based on File type the plugin will be on. Its Default Pl
 set laststatus=2 					"set the status line
 set noswapfile
 
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :bd<CR>
-inoremap jj  <ESC><ESC><ESC><ESC>
+nnoremap <Leader>w 	:w<CR>
+nnoremap <Leader>q 	:bd<CR>
+nnoremap <Leader>n 	:bn<CR>
+nnoremap <Leader>b 	:bN<CR>
 nnoremap <Leader>so :source ~/.vimrc<CR>
 nnoremap <Leader>vs :w !sudo tee %<CR>
+nnoremap <C-_> 		:Commentary<CR>
+inoremap jj  		<ESC><ESC><ESC><ESC>
+nnoremap t			o<ESC>k
+nnoremap T 			O<ESC>j
+
+""" Disabling Arrow Keys:
+nnoremap <Left> 		:echo "No left for you!"<CR>
+vnoremap <Left> 		:<C-u>echo "No left for you!"<CR>
+inoremap <Left> <C-o>	:echo "No left for you!"<CR>
+nnoremap <Right> 		:echo "No Right for you!"<CR>
+vnoremap <Right> 		:<C-u>echo "No Right for you!"<CR>
+inoremap <Right> <C-o>	:echo "No left Right you!"<CR>
+nnoremap <Up> 			:echo "No Up for you!"<CR>
+vnoremap <Up> 			:<C-u>echo "No Up for you!"<CR>
+inoremap <Up> <C-o>		:echo "No Up for you!"<CR>
+nnoremap <Down> 		:echo "No Down for you!"<CR>
+vnoremap <Down> 		:<C-u>echo "No Down for you!"<CR>
+inoremap <Down> <C-o>	:echo "No Down for you!"<CR>
+nnoremap <Leader>,bs 	:.!boxes -d stone<CR>
+nnoremap <Leader>,bn 	:.!boxes -d nuke<CR>7jFjxxxi___<ESC>3jo<ESC>
