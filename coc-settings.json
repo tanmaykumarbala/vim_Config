@@ -1,0 +1,33 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"css",
+		"markdown",
+		"javascript",
+		"graphql",
+		"html",
+		"yaml",
+		"json",
+		"python",
+		"java",
+		"sh",
+		"bash"
+	],
+	// python config
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	// java config
+	"java.enabled": true,
+	"java.format.enabled": true,
+	"java.format.comments.enabled": true,
+	"java.autobuild.enabled": true,
+	"java.codeGeneration.useBlocks": true,
+	"java.codeGeneration.generateComments": true,
+	"java.saveActions.organizeImports": true,
+	"java.completion.enabled": true,
+	"codeLens.enable": true,
+	"java.referencesCodeLens.enabled": true,
+	"snippets.ultisnips.directories": [
+		"UltiSnips",
+		"~/.config/nvim/utils/snips"
+	]
+}
