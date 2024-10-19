@@ -57,7 +57,7 @@ nnoremap <TAB> :bn<CR>
 nnoremap <S-TAB> :bprev<CR>
 nnoremap <C-_>          :Commentary<CR>
 nnoremap t                      o<ESC>k
-nnoremap T                      O<ESC>j
+nnoremap o                      O<ESC>j
 nnoremap <A-r>      :!python ./main.py<CR>
 nnoremap <Leader>venv :!python3 -m venv venv<CR>
 nnoremap <Leader>act :!./venv/bin/activate<CR>
