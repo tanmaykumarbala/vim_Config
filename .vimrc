@@ -1,7 +1,15 @@
+"""
+"@tbala
+" NOTE:
+" Error: Not an editor command: ^M
+" Solution :w ++ff=unix
+" Error: To copy plugin(vim plug) from windows to linux.
+" Solution: git config --global core.autocrlf false
+
 "+----------+
 "| Plugins: |
 "+----------+
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 	Plug 'tpope/vim-commentary'
     Plug 'jiangmiao/auto-pairs'
 	Plug 'morhetz/gruvbox'
@@ -11,6 +19,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
 	Plug 'chiel92/vim-autoformat'
 	Plug 'tpope/vim-surround'
+	" MyPlugins
     Plug 'tanmaykumarbala/toogleBoolean'
     Plug 'tanmaykumarbala/toggleNU'
 	Plug 'tanmaykumarbala/toggleIC'
@@ -46,7 +55,7 @@ colorscheme gruvbox
 "+-----------+
 "| my config |
 "+-----------+
-let mapleader=" "					"Maping Leader.
+let mapleader=","					"Maping Leader.
 syntax on							"File syntax on(netrw).
 filetype plugin on					"Based on File type the plugin will be on. Its Default Plugin Comes with VIM.(For netrw).
 set number relativenumber			"Line Number and Relative number.
@@ -73,6 +82,7 @@ set path+=**						"Setting path for file incremetal search in project for Files 
 set laststatus=2 					"set the status line
 set wildignore+=**/venv/**
 
+nnoremap <C-d>						:no command maped<ESC><ESC>
 nnoremap <C-h>						:wincmd h<CR>
 nnoremap <C-k>						:wincmd k<CR>
 nnoremap <C-j>						:wincmd j<CR>
@@ -85,6 +95,12 @@ nnoremap <Leader>vim                :e ~/.vimrc<CR>
 nnoremap <Leader>so                 :source ~/.vimrc<CR>
 nnoremap <Leader>vs                 :w !sudo tee %<CR>
 nnoremap <Leader>ctag               :!ctags -R .<CR>
+nnoremap <Leader>fl                 :vimgrep /def\ /%<bar>:copen<CR>
+nnoremap <Leader>fr                 :vimgrep /<c-r>=expand("<cword>")<cr>/ ./**/*.py<bar>:copen<CR>
+nnoremap <leader>co					:copen<CR>
+nnoremap <leader>cc					:cclose<CR>
+nnoremap <leader>cn					:cnext<CR>
+nnoremap <leader>cp					:cprevious<CR>
 nnoremap <leader>e					:NERDTreeToggle<CR>
 nnoremap <leader>f					:NERDTreeFocus<CR>
 nnoremap <leader>r                  :!python ./main.py<CR>
