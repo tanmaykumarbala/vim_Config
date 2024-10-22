@@ -1,5 +1,5 @@
 """
-"@tbala
+" @tbala
 " NOTE:
 " Error: Not an editor command: ^M
 " Solution :w ++ff=unix
@@ -9,7 +9,7 @@
 "+----------+
 "| Plugins: |
 "+----------+
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-commentary'
     Plug 'jiangmiao/auto-pairs'
 	Plug 'morhetz/gruvbox'
@@ -68,7 +68,7 @@ set wildmenu						"Setting menu on (Fuzzy finder, file name, etc in botton bar).
 set nocompatible
 set autoread
 set splitright
-
+set ff=unix
 set mouse=r
 set scrolloff=10
 set tabstop=4						"Tabs limit to 4.
@@ -131,7 +131,7 @@ if has("gui_running")
 	set guioptions-=T
 	set guioptions-=m
 	set guioptions-=r
-	set guioptions=Consolas:h11
+	set guifont=Consolas:h11
 	let g:airline_powerline_fonts = 0
 	set lines=999 columns=999
 endif
