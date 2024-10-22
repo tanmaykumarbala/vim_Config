@@ -110,7 +110,14 @@ nnoremap <Leader>,bn 	            :.!boxes -d nuke<CR>7jFjxxxi___<ESC>3jo<ESC>
 "| Custome functions for gvim |
 "+----------------------------+
 if has("gui_running")
+	colorscheme gruvbox
 	set guioptions-=L
+	set guioptions-=T
+	set guioptions-=m
+	set guioptions-=r
+	set guioptions=Consolas:h11
+	let g:airline_powerline_fonts = 0
+	set lines=999 columns=999
 endif
 
 
